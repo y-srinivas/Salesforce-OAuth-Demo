@@ -318,7 +318,7 @@
 		      <artifactId>maven-resources-plugin</artifactId>                
 		      <configuration>
 		        <nonFilteredFileExtensions>
-		          <nonFilteredFileExtension>jks</nonFilteredFileExtension>
+		          <nonFilteredFileExtension>p12</nonFilteredFileExtension>
 		        </nonFilteredFileExtensions>
 		      </configuration>
 		    </plugin>

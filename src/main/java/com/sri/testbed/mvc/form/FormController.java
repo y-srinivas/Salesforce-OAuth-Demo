@@ -162,7 +162,7 @@ public class FormController {
 
       //Load the private key from a keystore
       KeyStore keystore = KeyStore.getInstance("JKS");
-      keystore.load(this.getClass().getResourceAsStream("keystore.jks"), "jyothi".toCharArray());
+      keystore.load(this.getClass().getResourceAsStream("/keystore.jks"), "jyothi".toCharArray());
       PrivateKey privateKey = (PrivateKey) keystore.getKey("cert", "jyothi".toCharArray());
 
       //Sign the JWT Header + "." + JWT Claims Object
