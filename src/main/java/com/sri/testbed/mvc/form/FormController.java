@@ -48,7 +48,7 @@ public class FormController {
 	}
 	
 	@RequestMapping(method=RequestMethod.GET)
-	public @ResponseBody String form(Model model) {
+	public @ResponseBody String form(Model model) throws Exception {
 		model.addAttribute("formBean", new FormBean());
 		
 		return connectSalesforce();
@@ -59,7 +59,7 @@ public class FormController {
 	  static final String PASSWORD = "Password#234DxvNq8jWd0hTmrtmG3UgP7ts";
 	  static PartnerConnection connection;
 
-	  public  String connectSalesforce() {
+	  public  String connectSalesforce() throws Exception {
 
 	    
 	  
@@ -98,9 +98,9 @@ public class FormController {
 	      
 	    } catch (Exception e1) {
 	        e1.printStackTrace();
+	        throw e1;
 	    }
-		return message;  
-
+		
 	  }
 	  
 	  // queries and displays the 5 newest contacts
